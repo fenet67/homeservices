@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Services</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+    <style>
+      .jumbotron text-center{
+        display: flex;
+        justify-content: center;
+        padding: 200px;
+        
+      }
+      body {
+        background-image: url('w3css.gif');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        
+      }
+
+    </style>
+</head>
+<body style="background-image:url('{% static 'image/hoome.png'%}');  color: white;">
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">Lucky Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/services">Services</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact Us</a>
+              </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="/signup" style="color: red; font-weight: bold;">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/signin" style="color: red; font-weight: bold;">Sign In</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+  
+  
+        <div id="home"  style="  height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background-image: url('bgg.png'); background-size: cover; margin: 0;">
+            <h1 style="font-size: 4rem; color: white;">Welcome to Home Services!</h1>
+            <p style="font-size: 1.5rem; color: white;">We provide plumbing, electrical, and other home services to keep your home safe and comfortable.</p>
+            <a href="#about"><button type="button" class="btn btn-primary" style="font-size: 1.2rem; margin-right: 1rem;">About us</button></a>
+            
+        </div>
+    
+    
+        <div id="about" class="container mt-5" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <h2 style="font-size: 4rem;">About Us</h2>
+            <div >
+              <div style="flex: 1; text-align: center; margin-left: 30px; margin-right: 75px;">
+                <p style="font-size: 1.5rem;">Welcome to Home Services! We are a team of dedicated professionals providing top-notch plumbing, electrical, and other home services.
+                Our mission is to ensure customer satisfaction by delivering high-quality services at affordable prices.Whether it's fixing a leaky faucet, installing new wiring, 
+                or any other home repair job, you can trust us to get the job done right the first time. At Home Services, we pride ourselves on our professionalism, integrity, and commitment to excellence.</p>
+              </div>
+              
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <a class="nav-link" href="#contact"><button type="button" class="btn btn-primary" style="font-size: 1.2rem;">Contact Us</button></a>
+                
+            </div>
+            <div class="card-deck" style="width: 100%; display: flex; justify-content: space-between; height: 40%;">
+              <div class="card" style=" border-radius: 4px;  margin: 1rem; flex-basis: calc(33.333% - 2rem);">
+                <img class="card-img-top" src="static/image/a1.jpg" alt="Card image cap">
+                
+              </div>
+              <div class="card" style="border: 1px solid #ccc; border-radius: 4px;  margin: 1rem; flex-basis: calc(33.333% - 2rem);">
+                <img class="card-img-top" src="static/image/a2.jpg" alt="Card image cap">
+               
+              </div>
+              <div class="card" style="border: 1px solid #ccc; border-radius: 4px;  margin: 1rem; flex-basis: calc(33.333% - 2rem);">
+                <img class="card-img-top" src="static/image/a3.jpg" alt="Card image cap">
+                
+              </div>
+            </div>
+          </div>
+       
+
+     
+    
+
+
+
+          
+            <div id="contact" class="container mt-5" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+              <h2 style="font-size: 4rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Contact Us</h2>
+              <div class="row" style="width: 80%;">
+                <div class="col-md-6" style="padding: 2rem; border-right: 1px solid #ccc;">
+                  <p style="font-size: 1.5rem;">Have a question or need assistance? Get in touch with us using the contact form below:</p>
+                  <form style="width: 100%;">
+                    <div class="form-group">
+                      <label for="name" style="display: block; margin-bottom: 0.5rem;">Name:</label>
+                      <input type="text" class="form-control" id="name" placeholder="Enter your name" style="border-radius: 4px; padding: 0.5rem; font-size: 1.2rem; width: 100%; margin-bottom: 1rem;">
+                    </div>
+                    <div class="form-group">
+                      <label for="email" style="display: block; margin-bottom: 0.5rem;">Email:</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter your email" style="border-radius: 4px; padding: 0.5rem; font-size: 1.2rem; width: 100%; margin-bottom: 1rem;">
+                      <small id="emailHelp" class="form-text text-muted" style="display: block; margin-top: 0.5rem; font-size: 1rem;">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="message" style="display: block; margin-bottom: 0.5rem;">Message:</label>
+                      <textarea class="form-control" id="message" rows="5" placeholder="Enter your message" style="border-radius: 4px; padding: 0.5rem; font-size: 1.2rem; width: 100%; margin-bottom: 1rem;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="border-radius: 4px; padding: 0.5rem 2rem; font-size: 1.2rem;">Submit</button>
+                  </form>
+                </div>
+                <div class="col-md-6" style="padding: 2rem;">
+                  <p style="font-size: 1.5rem;">You can also reach us via phone or email:</p>
+                  <ul style="padding-left: 2rem;">
+                    <li style="font-size: 1.2rem; margin-bottom: 0.5rem;"><strong>Phone:</strong> 123-456-7890</li>
+                    <li style="font-size: 1.2rem; margin-bottom: 0.5rem;"><strong>Email:</strong> info@homeservices.com</li>
+                  </ul>
+                  <p style="font-size: 1.5rem;">Visit us at our office:</p>
+                  <address style="font-size: 1.2rem;">
+                    123 Main Street<br>
+                    City, State, Zip Code<br>
+                    Country
+                  </address>
+                </div>
+              </div>
+            </div>
+          
+<!-- Footer Section -->
+<footer class="container-fluid mt-5" style="background-color: #f8f9fa; border-top: 1px solid #e9ecef; padding: 3rem; margin-left: 0; margin-right: 0;">
+  <section class="container-fluid">
+    <div class="links text-center">
+        <a href="">home |</a>
+        <a href="#contact">Contact Us |</a>
+        <a href="/services">services |</a>
+        <a href="">facebook |</a>
+        <a href="">twitter |</a>
+        <a href="">linkden |</a>
+        <a href="">Terms of Service |</a>
+        <a href="">Privacy Policy |</a>
+        
+    </div> 
+    <div class="footer text-center">
+        Copyright © 2023 Home Services. All rights reserved.
+    </div>
+ </section>
+  </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
